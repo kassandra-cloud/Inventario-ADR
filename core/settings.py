@@ -151,12 +151,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'                                 # ya lo tienes
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')     # ya lo tienes
 
-# Dile a Django dónde buscar los archivos estáticos “en crudo”:
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Carpeta(s) donde Django buscará los archivos “en crudo”
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'core', 'static'),  # <— ruta a tu carpeta static dentro de core/
+    
+    os.path.join(BASE_DIR, 'static'),
+   
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
